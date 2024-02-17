@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="container">
+    <section>
+        <h2>{{titlePage}}</h2>
+    </section>
+    <section>
+        <table>
+            <thead class="box-header">
+                {% if titlePage == 'Tasks Completed' %}
+                    <th>Tarea</th><th>Descipcion</th><th>Usuario</th><th>Fecha</th>
+                {% else %}
+                    <th>Tarea</th><th>Descipcion</th><th>Usuario</th>
+                {% endif %}
+            </thead>
+            <tbody class="box-body">
+                {% for task in tasks %}
+                    <tr>
+                        {% if task.important %}
+                            <td><a href="{% url 'task_details' task.id %}"><strong>{{task.title}}</strong></a></td>
+                        {% else %}
+                            <td><a href="{% url 'task_details' task.id %}">{{task.title}}</a></td>
+                        {% endif %}
+                        <td>{{task.description}}</td><td>{{task.user.username}}</td>
+                        <td>{{task.datecompleted|date:'M j v:i'}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</main>
+{% endblock %}

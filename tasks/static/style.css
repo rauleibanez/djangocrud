@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-family: montserrat;
+}
+
+header{
+    background-color: #253062;
+    /*text-align: center;*/
+    padding: 5px 0;
+    display:flex;
+    justify-content: space-between;
+}
+
+footer{
+    text-align: center;
+    padding: 5px 0;
+    display:flex;
+    justify-content: space-between;
+}
+
+nav {
+    /*background: #404040;*/
+    padding: 5px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 5px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: yellow;
+    font-weight:bold;
+}
+
+/* PSEUDO ELEMENTOS */
+nav ul li a:active{
+    color: rgb(39, 113, 197); 
+}
+nav ul li a::after{
+    content: " | ";
+}
+
+.user {
+    color:yellow;
+    font-size: 18px;    
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    overflow: hidden;
+    max-width: 1000px;
+}
+
+.contenedor{
+    display:flex;
+    justify-content: center;  
+}
+
+/* TABLAS */
+table {
+    background: white;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  th {
+    background-color: rgba(5, 5, 100, 95);
+    height: 35px;
+    border-bottom: 1px solid rgb(210, 220, 250);
+    color: rgb(253, 253, 253);
+  }
+  
+  td {
+    color: rgba(100, 100, 100, 60);
+    height: 30px;
+    border: 0.5px solid rgba(240, 240, 240, 10);
+  }
+  
+  tfoot {
+    font-weight: bold;
+  }
+  
+  /*Pseudo-clases*/
+ 
+  tr:hover {
+    background-color: rgb(203, 223, 230);
+  }
+
+/* CASILLAS O CAJAS
+=================================*/
+.box{
+    height: auto;
+    width: 30%;
+    border: 3px solid #253062;
+    /*border-radius: 10px;*/
+    border-radius: .25rem;
+    margin: 15px;
+    text-align: center;
+    align-items: center;      
+}
+
+/*  ENCABEZADO y MAIN DE LA CAJA
+=================================*/
+.box-header{
+    background-color: #253062;
+    text-align: center;
+    padding: 15px 0;
+    color: #fff;
+}
+
+.box-body{
+    text-align: center;
+    padding: 10px;
+}
+
+.box-foot{
+    background-color: #253062;   
+}
+
+/*BOTONES*/
+.btn{
+    background-color: #253062;
+    color: #fff;
+    width: 120px;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    margin: 5px;
+    border-style: none;
+    /*border-radius: 10px;*/
+    border-radius: .25rem;
+}
+
+.btn:hover, .btn:focus{
+    background-color: #1b2550;
+    cursor: pointer;
+}
+
+.btn:active{
+    background-color: #4c5580;
+}

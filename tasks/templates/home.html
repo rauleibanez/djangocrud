@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="container">
+    <div>
+        <h2>Django App</h2>
+        <h3> Aplicacion de Tareas (CRUD)</h3>
+        <p> Realizada en el Framework Django con el motor Jinja 2</p>
+    </div>
+    <section class="contenedor">
+        <article class="box">
+            <div class="box-header">
+                <p>Acceso</p>
+            </div>
+            <div class="box-body">
+                <p> Para acceder a las funcionalidades de la aplicacion debe iniciar sesión.</p> 
+                <p> Si ya se ha registrado previamente, pulse el enlace de </p><a href="/signin">Signin</a><p>para iniciar sesion y crear tareas o administrarlas, escoja las opcions del menu superior del navegador</p>
+                <p> Puede salir de las funcionabilidades de la app haciendo click en Logout cuando haya iniciado sesion </p>
+            </div>
+        </article>
+        <article class="box">
+            <div class="box-header">
+                <p>Registro</p>
+            </div>
+            <div class="box-body">
+                <p> Si no se ha registrado pulse el enlace de</p><a href="/signup">Signup</a><p> para crear un usuario y acceder a la aplicación</p>
+            </div>
+        </article>
+        <article class="box">
+            <div class="box-header">
+                <p>Tareas</p>
+            </div>
+            <div class="box-body">
+                <p> Para crear tareas pulse en esta opcion </p><a href="/tasks/create">New Task</a><p> llene el formmulario</p>
+                <p> Podrá actualizarlas o eliminarlas las tareas en proceso, pulsando en la opcion</p> <a href="/tasks">View Tasks Pending</a>
+                <p> O puede revisar las Tareas Finalizadas haciendo click en </p> <a href="/tasks_done">View Tasks Completed</a>
+            </div>
+        </article>   
+    </section>
+</main>
+
+{% endblock %}
